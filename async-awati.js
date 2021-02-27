@@ -38,7 +38,7 @@ const getSueldoById = async (id) => {
     }
 }
 
-const id = 3;
+const id = 2;
 const getDatosCompletosEmpleado = async (id)=>{
     try{
         const empleado = await getEmpleadoById(id);
@@ -56,5 +56,5 @@ const getDatosCompletosEmpleado = async (id)=>{
 
 getDatosCompletosEmpleado(id)
 .then( data =>
-    console.log(`El empleado con id:${data.id} es ${data.nombre}`))
+    console.log(`El empleado ${data.nombre} tiene un sueldo ${data.sueldo}`))
 .catch(err => console.log(err.message));
